@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NIMBUS TECHNOLOGIES - Debug Terminal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Matrix rain canvas -->
+    <canvas id="matrix-rain"></canvas>
+
+    <!-- CRT screen container -->
+    <div class="crt-container">
+        <div class="crt scanlines">
+            <div class="screen-content">
+                <!-- Boot sequence -->
+                <div id="boot-sequence" class="boot-sequence">
+                    <div class="boot-line" data-delay="0">> NIMBUS TECHNOLOGIES - INTERNAL SYSTEMS</div>
+                    <div class="boot-line" data-delay="400">> Initializing secure connection...</div>
+                    <div class="boot-line" data-delay="800">> Bypassing firewall<span class="dots"></span> <span class="status">[OK]</span></div>
+                    <div class="boot-line" data-delay="1400">> Loading debug environment<span class="dots"></span> <span class="status">[OK]</span></div>
+                    <div class="boot-line" data-delay="2000">> Authenticating<span class="dots"></span> <span class="status">[OK]</span></div>
+                    <div class="boot-line" data-delay="2600">&nbsp;</div>
+                    <div class="boot-line warning" data-delay="2800">> WARNING: Unauthorized access detected</div>
+                    <div class="boot-line" data-delay="3200">> User: kevin-debug (TERMINATED EMPLOYEE)</div>
+                    <div class="boot-line" data-delay="3600">> Last login: Fri Jan 15 23:47:33 2024</div>
+                </div>
+
+                <!-- Main content (hidden initially) -->
+                <div id="main-content" class="main-content hidden">
+                    <div class="separator">============================================</div>
+
+                    <pre class="ascii-logo glow">
+  ███╗   ██╗██╗███╗   ███╗██████╗ ██╗   ██╗███████╗
+  ████╗  ██║██║████╗ ████║██╔══██╗██║   ██║██╔════╝
+  ██╔██╗ ██║██║██╔████╔██║██████╔╝██║   ██║███████╗
+  ██║╚██╗██║██║██║╚██╔╝██║██╔══██╗██║   ██║╚════██║
+  ██║ ╚████║██║██║ ╚═╝ ██║██████╔╝╚██████╔╝███████║
+  ╚═╝  ╚═══╝╚═╝╚═╝     ╚═╝╚═════╝  ╚═════╝ ╚══════╝
+                                   <span class="subtitle">TECHNOLOGIES</span>
+                    </pre>
+
+                    <div class="separator">============================================</div>
+
+                    <div class="incident-report">
+                        <div class="report-header glow">INCIDENT REPORT #4471</div>
+                        <div class="report-divider">----------------------</div>
+                        <br>
+                        <p>Our ex-intern <span class="highlight">"Kevin"</span> was let go last week after he</p>
+                        <p>mass-replied <span class="highlight">"skill issue"</span> to an executive email thread.</p>
+                        <br>
+                        <p>Before leaving, Kevin claims he hid a <span class="highlight">"farewell gift"</span></p>
+                        <p>somewhere on this server. IT has locked down SSH access,</p>
+                        <p>but Kevin left behind a debug terminal.</p>
+                        <br>
+                        <p class="mission">Your mission: <span class="highlight">Escalate privileges and find Kevin's gift.</span></p>
+                        <br>
+                        <div class="slack-status">
+                            <span class="slack-label">Kevin's last Slack status:</span>
+                            <span class="slack-message glitch" data-text='"they mass mass mass mass but do they kit kit kit?"'>"they mass mass mass mass but do they kit kit kit?"</span>
+                        </div>
+                    </div>
+
+                    <div class="separator">============================================</div>
+
+                    <button id="connect-btn" class="connect-btn" onclick="connectToTerminal()">
+                        <span class="btn-bracket">[</span>
+                        <span class="btn-text">CONNECT TO DEBUG TERMINAL</span>
+                        <span class="btn-bracket">]</span>
+                    </button>
+
+                    <div class="footer">
+                        <span class="blink">_</span> Press button to initialize connection <span class="blink">_</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Screen flicker overlay -->
+    <div class="flicker-overlay"></div>
+
+    <!-- Audio for button click (optional) -->
+    <audio id="beep-sound" preload="auto">
+        <source src="data:audio/wav;base64,UklGRnoGAABXQVZFZm10IBAAAAABAAEAQB8AAEAfAAABAAgAZGF0YQoGAACBhYqFbF1fdH2Onq+ck4N0bW1weH+Fh4WBfXp4eHt+gYKAfnx6d3Z3eXt8fHx8e3p5eXl5enp6e3x8fHx8fHt7fHx8fHx8fHx8fHx8fHx8fHx8fHx7e3t7fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8" type="audio/wav">
+    </audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
