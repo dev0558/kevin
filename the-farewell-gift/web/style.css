@@ -332,6 +332,16 @@ body {
     text-shadow: 0 0 10px var(--amber);
 }
 
+.highlight-key {
+    color: var(--bg-black);
+    background: var(--phosphor-green);
+    padding: 2px 8px;
+    border-radius: 3px;
+    font-weight: bold;
+    text-shadow: none;
+    box-shadow: 0 0 10px var(--phosphor-green);
+}
+
 .mission {
     margin-top: 15px !important;
 }
