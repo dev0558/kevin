@@ -32,7 +32,29 @@ body {
     align-items: center;
     font-family: 'JetBrains Mono', 'Fira Code', 'Consolas', monospace;
     color: var(--phosphor-green);
-    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding: 40px 0;
+}
+
+/* Custom green scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg-black);
+    border-left: 1px solid var(--phosphor-green-dark);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--phosphor-green-dim);
+    border-radius: 5px;
+    box-shadow: 0 0 10px var(--phosphor-green);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--phosphor-green);
 }
 
 /* =====================================================
