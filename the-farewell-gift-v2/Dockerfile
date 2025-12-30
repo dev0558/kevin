@@ -12,7 +12,7 @@ ENV DEBIAN_FRONTEND=noninteractive
 ENV TZ=UTC
 
 # =====================================================
-# INSTALL PACKAGES (keeping sudo vulnerable)
+# INSTALL PACKAGES (without sudo - we'll compile vulnerable version)
 # =====================================================
 
 RUN apt-get update && apt-get install -y \
@@ -27,14 +27,27 @@ RUN apt-get update && apt-get install -y \
     iputils-ping \
     nginx \
     supervisor \
-    sudo \
     locales \
     ca-certificates \
     file \
     binutils \
+    libpam0g-dev \
     && rm -rf /var/lib/apt/lists/*
 
-# Verify sudo version is vulnerable (< 1.8.28)
+# =====================================================
+# INSTALL VULNERABLE SUDO (1.8.27 - CVE-2019-14287)
+# =====================================================
+
+RUN cd /tmp && \
+    wget -q https://www.sudo.ws/dist/sudo-1.8.27.tar.gz && \
+    tar xzf sudo-1.8.27.tar.gz && \
+    cd sudo-1.8.27 && \
+    ./configure --prefix=/usr --libexecdir=/usr/lib --with-pam && \
+    make && \
+    make install && \
+    cd / && rm -rf /tmp/sudo-1.8.27*
+
+# Verify sudo version is vulnerable (1.8.27)
 RUN sudo --version | head -1
 
 # Set locale
