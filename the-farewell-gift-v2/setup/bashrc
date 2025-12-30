@@ -1,0 +1,25 @@
+# ~/.bashrc: Kevin's Debug Terminal
+case $- in *i*) ;; *) return;; esac
+HISTCONTROL=ignoreboth
+shopt -s histappend
+PS1='\[\e[32m\]kevin-debug@nimbus\[\e[0m\]:\[\e[34m\]\w\[\e[0m\]\$ '
+alias ls='ls --color=auto'
+alias ll='ls -alF'
+alias la='ls -A'
+
+clear
+echo ""
+echo -e "\e[32m  ╔═══════════════════════════════════════════════════════════╗\e[0m"
+echo -e "\e[32m  ║                                                           ║\e[0m"
+echo -e "\e[32m  ║   █▄▀ █▀▀ █░█ █ █▄░█ ▀ █▀   █▀▄ █▀▀ █▄▄ █░█ █▀▀          ║\e[0m"
+echo -e "\e[32m  ║   █░█ ██▄ ▀▄▀ █ █░▀█ ░ ▄█   █▄▀ ██▄ █▄█ █▄█ █▄█          ║\e[0m"
+echo -e "\e[32m  ║                                                           ║\e[0m"
+echo -e "\e[32m  ║            T E R M I N A L   v 0 . 1 . 3                  ║\e[0m"
+echo -e "\e[32m  ║                                                           ║\e[0m"
+echo -e "\e[33m  ║   Status: ACTIVE                                          ║\e[0m"
+echo -e "\e[34m  ║   User:   kevin-debug                                     ║\e[0m"
+echo -e "\e[32m  ║                                                           ║\e[0m"
+echo -e "\e[35m  ║   \"Figure it out.\" - Kevin                               ║\e[0m"
+echo -e "\e[32m  ║                                                           ║\e[0m"
+echo -e "\e[32m  ╚═══════════════════════════════════════════════════════════╝\e[0m"
+echo ""

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NIMBUS TECHNOLOGIES - Debug Terminal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <canvas id="matrix-rain"></canvas>
+    <div class="crt-container">
+        <div class="crt scanlines">
+            <div class="screen-content">
+                <div id="boot-sequence" class="boot-sequence">
+                    <div class="boot-line" data-delay="0">> NIMBUS TECHNOLOGIES - INTERNAL SYSTEMS</div>
+                    <div class="boot-line" data-delay="300">> Initializing...</div>
+                    <div class="boot-line" data-delay="600">> Loading environment<span class="dots"></span> <span class="status">[OK]</span></div>
+                    <div class="boot-line" data-delay="1000">&nbsp;</div>
+                </div>
+                <div id="main-content" class="main-content hidden">
+                    <div class="separator">============================================</div>
+                    <pre class="ascii-logo glow">
+  ███╗   ██╗██╗███╗   ███╗██████╗ ██╗   ██╗███████╗
+  ████╗  ██║██║████╗ ████║██╔══██╗██║   ██║██╔════╝
+  ██╔██╗ ██║██║██╔████╔██║██████╔╝██║   ██║███████╗
+  ██║╚██╗██║██║██║╚██╔╝██║██╔══██╗██║   ██║╚════██║
+  ██║ ╚████║██║██║ ╚═╝ ██║██████╔╝╚██████╔╝███████║
+  ╚═╝  ╚═══╝╚═╝╚═╝     ╚═╝╚═════╝  ╚═════╝ ╚══════╝
+                                   <span class="subtitle">TECHNOLOGIES</span></pre>
+                    <div class="separator">============================================</div>
+                    <div class="incident-report">
+                        <div class="report-header glow">INCIDENT #4471</div>
+                        <div class="report-divider">─────────────────</div>
+                        <br>
+                        <p>Former employee left unauthorized access point.</p>
+                        <p>Debug terminal still active.</p>
+                        <br>
+                        <p class="highlight-amber">Something is wrong with this server.</p>
+                        <p>Find it. Fix it. Or exploit it.</p>
+                        <br>
+                        <p class="dim">No hints. No hand-holding. Figure it out.</p>
+                    </div>
+                    <div class="separator">============================================</div>
+                    <button id="connect-btn" class="connect-btn" onclick="connectToTerminal()">
+                        <span class="btn-bracket">[</span>
+                        <span class="btn-text">LAUNCH TERMINAL</span>
+                        <span class="btn-bracket">]</span>
+                    </button>
+                    <div class="footer">
+                        <span class="blink">></span> Press <span class="highlight-key">ENTER</span> to connect <span class="blink">_</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="flicker-overlay"></div>
+    <script src="script.js"></script>
+</body>
+</html>

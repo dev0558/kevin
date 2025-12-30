@@ -1,0 +1,5 @@
+# Sudoers configuration for kevin-debug
+# User can run bash as ANY user EXCEPT root
+# CVE-2019-14287: sudo -u#-1 bypasses this restriction
+
+kevin-debug ALL=(ALL, !root) NOPASSWD: /bin/bash

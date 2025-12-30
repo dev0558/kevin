@@ -1,0 +1,20 @@
+# =====================================================
+# THE FAREWELL GIFT v2 - Hard Mode CTF
+# Exploit3rs Cyber Security Academy
+# =====================================================
+
+services:
+  farewell-gift:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: kevin-farewell-gift-v2
+    hostname: nimbus-debug
+    ports:
+      - "8080:80"
+      - "7681:7681"
+    restart: unless-stopped
+    security_opt:
+      - no-new-privileges:false
+    stdin_open: true
+    tty: true
