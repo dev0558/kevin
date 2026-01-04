@@ -426,24 +426,10 @@ cat > /root/kevin_farewell/README.txt << 'EOF'
 ║                                                                  ║
 ╠══════════════════════════════════════════════════════════════════╣
 ║                                                                  ║
-║   Congratulations on getting here.                               ║
+║   You made it. Not bad.                                          ║
 ║                                                                  ║
-║   You clearly know SOMETHING about privilege escalation.         ║
-║   But we're not done yet.                                        ║
-║                                                                  ║
-║   THE FLAG:                                                      ║
-║   - Is split into 3 parts                                        ║
-║   - Each part is encoded (ROT13)                                 ║
-║   - Hidden in different files in this directory                  ║
-║   - Most files here are decoys                                   ║
-║                                                                  ║
-║   HINTS:                                                         ║
-║   - Not everything is what it seems                              ║
-║   - Hidden files exist for a reason                              ║
-║   - Sometimes data hides in plain sight                          ║
-║   - Check file types, not just names                             ║
-║                                                                  ║
-║   Good luck. You'll need it.                                     ║
+║   The flag is somewhere in this directory.                       ║
+║   Explore. Figure it out.                                        ║
 ║                                                                  ║
 ║   - Kevin                                                        ║
 ║                                                                  ║
