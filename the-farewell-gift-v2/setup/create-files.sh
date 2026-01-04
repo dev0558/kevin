@@ -418,6 +418,38 @@ chmod -R 755 /tmp/cache
 
 mkdir -p /root/kevin_farewell/{memories,.flag,ignore_this}
 
+# README.txt
+cat > /root/kevin_farewell/README.txt << 'EOF'
+╔══════════════════════════════════════════════════════════════════╗
+║                                                                  ║
+║   K E V I N ' S   F A R E W E L L   G I F T                      ║
+║                                                                  ║
+╠══════════════════════════════════════════════════════════════════╣
+║                                                                  ║
+║   Congratulations on getting here.                               ║
+║                                                                  ║
+║   You clearly know SOMETHING about privilege escalation.         ║
+║   But we're not done yet.                                        ║
+║                                                                  ║
+║   THE FLAG:                                                      ║
+║   - Is split into 3 parts                                        ║
+║   - Each part is encoded (ROT13)                                 ║
+║   - Hidden in different files in this directory                  ║
+║   - Most files here are decoys                                   ║
+║                                                                  ║
+║   HINTS:                                                         ║
+║   - Not everything is what it seems                              ║
+║   - Hidden files exist for a reason                              ║
+║   - Sometimes data hides in plain sight                          ║
+║   - Check file types, not just names                             ║
+║                                                                  ║
+║   Good luck. You'll need it.                                     ║
+║                                                                  ║
+║   - Kevin                                                        ║
+║                                                                  ║
+╚══════════════════════════════════════════════════════════════════╝
+EOF
+
 # goodbye.txt
 cat > /root/kevin_farewell/goodbye.txt << 'EOF'
 
